@@ -1,3 +1,5 @@
+//ANGULAR SITE
+
 var app = angular.module('appOne', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider){
