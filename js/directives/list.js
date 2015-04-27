@@ -1,0 +1,16 @@
+app.directive('angList',function(){
+	return{
+		restrict:'E',
+		scope:{
+			info:'='
+		},
+		templateUrl:"js/directives/list.html",
+		controller:function($scope){
+		    $scope.itemName;
+                $scope.addItem=function(){
+                        $scope.info.push($scope.itemName);
+                        $scope.itemName="";
+                }
+            }
+	};
+});

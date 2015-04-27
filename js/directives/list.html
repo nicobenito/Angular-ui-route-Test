@@ -1,0 +1,10 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">List</div>
+  <div class="panel-body">
+    <ul>
+        <li ng-repeat="item in info">{{item}}</li>
+    </ul>
+    <input ng-model="itemName" class="form-control form-group col-sm-3" placeholder="New Item" type="text"/>
+    <button type="button" class="btn btn-success" ng-disabled="itemName==null||itemName==''" ng-click="addItem()">+Item</button>
+  </div>
+</div>

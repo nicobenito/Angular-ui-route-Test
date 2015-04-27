@@ -1,0 +1,13 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Animals State</div>
+  <div class="panel-body">
+        <h3>Animals</h3>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-info" ng-repeat="animal in animals">{{animal.name}}</li>
+      </ul>
+      <h3>On Extinction</h3>
+      <ul class="list-group">
+          <li class="list-group-item list-group-item-danger" ng-repeat="animal in animals | animalstate">{{animal.name}}</li>
+      </ul>
+  </div>
+</div>

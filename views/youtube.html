@@ -1,0 +1,22 @@
+<div class="dropdown col-sm-3">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Choose a video!
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li ng-repeat="video in videos" role="presentation" ng-click="videoSelected($index)"
+        <a role="menuitem" tabindex="{{$index}}" >{{video.title}}</a>
+    </li>
+  </ul>
+</div>
+<div class="col-sm-3">
+    <input class="form-control form-group" placeholder="Add a video!" type="text" ng-model="newVideo.link"/>
+    <input class="form-control form-group" placeholder="Title here" type="text" ng-model="newVideo.title"/>
+    <button type="button" class="btn btn-success" ng-disabled="newVideo.link==''||newVideo.link==null || newVideo.title==''||newVideo.title==null" ng-click="uploadVideo()">Add it!</button>
+</div>
+<div class="col-sm-12">
+    <h2>{{videoSrc.title}}</h2>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe id="theiframe" class="embed-responsive-item" src="{{currentVideo}}"></iframe>
+</div>
+</div>
